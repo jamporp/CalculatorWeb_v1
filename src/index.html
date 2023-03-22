@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator V.1</title>
+  </head>
+  <body>
+    <form>
+      <div><input type="text" value="" id="number1" /></div>
+      <div><input type="text" value="" id="number2" /></div>
+      <div>
+        <button onclick="cal_plus()" type="button">+</button>
+        <button onclick="cal_minus()" type="button">-</button>
+        <button onclick="cal_multi()" type="button">x</button>
+        <button onclick="cal_divide()" type="button">/</button>
+      </div>
+
+      <div>
+        <span style="font-size: xx-large; color: #671cc2" id="tx_result"
+          >00</span
+        >
+      </div>
+    </form>
+    <script>
+      function cal_plus() {
+        //ดึงค่าจากตัวเลขแล้วนำมา+กัน
+        var num1 = Number(document.getElementById("number1").value);
+        var num2 = Number(document.getElementById("number2").value);
+        var result = num1 + num2;
+        console.log(result);
+
+        //เอาผล+มาแสดง
+        document.getElementById("tx_result").innerHTML = result;
+      }
+      function cal_minus() {
+        //ดึงค่าจากตัวเลขแล้วนำมา-กัน
+        var num1 = Number(document.getElementById("number1").value);
+        var num2 = Number(document.getElementById("number2").value);
+        var result = num1 - num2;
+        console.log(result);
+
+        //เอาผล-มาแสดง
+        document.getElementById("tx_result").innerHTML = result;
+      }
+      function cal_multi() {
+        //ดึงค่าจากตัวเลขแล้วนำมาxกัน
+        var num1 = Number(document.getElementById("number1").value);
+        var num2 = Number(document.getElementById("number2").value);
+        var result = num1 * num2;
+        console.log(result);
+
+        //เอาผลxมาแสดง
+        document.getElementById("tx_result").innerHTML = result;
+      }
+      function cal_divide() {
+        //ดึงค่าจากตัวเลขแล้วนำมา/กัน
+        var num1 = Number(document.getElementById("number1").value);
+        var num2 = Number(document.getElementById("number2").value);
+        var result = num1 / num2;
+        console.log(result);
+
+        //เอาผล/มาแสดง
+        document.getElementById("tx_result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
